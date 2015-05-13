@@ -61,7 +61,7 @@ class Fourchette::Heroku
       name = addon['plan']['name']
       begin
         logger.info "Adding #{name} to #{to}"
-        client.addon.create(to, plan: name)
+        # client.addon.create(to, plan: name)
       rescue *EXCEPTIONS => e
         logger.error "Failed to copy addon #{name}"
         logger.error e
